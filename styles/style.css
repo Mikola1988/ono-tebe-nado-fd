@@ -109,7 +109,7 @@ h1 {
   all: unset;
   background: none;
   border: 2px solid #000;
-  border-color: rgb(255, 255, 255);
+  border-color: white;
   padding: 10px 30px;
   margin-top: -10px;
   cursor: pointer;
