@@ -1,1 +1,302 @@
-/* место для вашего кода */
+/* Изначально во всём файле в grid использовал относительные величины, 
+но тогда были большие расхождения с PerfectPixel, заменил на абсолтные для точной подгонки */
+header {
+  height: 293px;
+  display: grid;
+  grid-template-columns: 390px 42px 150px 180px 220px; /* <-- тут */
+  grid-auto-flow: column;
+  justify-content: left;
+  align-items: center;
+  font-size: 1.125rem;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 6px;
+}
+
+nav{
+  grid-column: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-nav {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.inline-elements {
+  display: inline; 
+  border-bottom: 1px solid rgb(0, 0, 0); 
+  padding-bottom: 0px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.adress {
+  line-height: 1.35;
+  grid-column: 5;
+}
+
+.logo-black {
+  grid-column: 3;
+  width: 138px;
+  height: 105px;
+}
+
+.cover {
+  background-image: url('/images/cover.jpg');
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  width: 100%;
+  height: 757px;
+  color: white;
+  box-sizing: border-box;
+}
+
+h1 {
+  height: 550px;
+  letter-spacing: 0.3em;
+  display: grid;
+  grid-template-columns: 286px 46px 281px 270px 10px; /* <-- тут */
+  grid-template-rows: 117.5px 17px; /* <-- тут и т.д. :)*/
+  place-items: start;
+  text-transform: uppercase;
+  font-size: 6.25rem;
+  padding: 165px 50px 0px 50px;
+  align-self: start;
+}
+
+/* .ono {
+  grid-column: 3 / span 3;
+  grid-row: 3 / span 3;
+} */
+
+.tebe {
+  grid-column: 3 / 6;
+  grid-row: 3 / 3;
+  align-self: start;
+  
+}
+
+.nado {
+  grid-column: 4 / 6;
+  grid-row: 5 / 6;
+  padding-top: 18px;
+  }
+
+.cover-botom-title {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 118px;
+  padding-left: 50px;
+  padding-right: 50px;
+  word-spacing: 18.3px;
+  text-transform: uppercase;
+  font-size: 1,375rem;
+  letter-spacing: 90%;
+}
+
+.cover-button {
+  all: unset;
+  background: none;
+  border: 2px solid #000;
+  border-color: rgb(255, 255, 255);
+  padding: 10px 30px;
+  margin-top: -10px;
+  cursor: pointer;
+  word-spacing: 0px;
+}
+
+.lots {
+  padding: 180px 24px 150px 24px;
+  height: 1023px;
+  width: 100%;
+  text-decoration: none;
+}
+
+h2 {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 2,5rem;
+  text-transform: uppercase;
+  padding-left: 40px;
+  padding-bottom: 27px;
+}
+
+.card-lots {
+  padding-top: 48px;
+  display: flex;
+  flex: 1;
+  list-style: none;
+  padding: 0;
+  gap: 25px;
+  height: 596px;
+  background-blend-mode: overlay;
+  width: 334px;
+  color: white;
+  text-transform: uppercase;
+  background-color: #f0f0f0;
+}
+
+.card-lots-movie {
+  background-image: url('/images/card-lot-01.jpg');
+    /* background-color: rgba(0, 0, 0, 0.6); переместил в отдельный класс
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 48px 40px;
+    background-size: 170%;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+.card-lots-book {
+  background-image: url('/images/card-lot-02.jpg');
+    /* background-color: rgba(0, 0, 0, 0.6); переместил в отдельный класс
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px;
+    grid-template-rows: 140px 360px;
+    padding: 48px 40px;
+    background-size: 170%;
+    background-position: center;
+    background-repeat: no-repeat;   */
+}
+
+.card-lots-picture{
+  background-image: url('/images/card-lot-03.jpg');
+    /* background-color: rgba(0, 0, 0, 0.6); переместил в отдельный класс
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 48px 40px;
+    background-size: 170%;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+.card-background {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 48px 40px;
+  background-size: 170%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-lots-top{
+  align-self: start;
+}
+
+.card-lots-bottom{
+  align-self: end;
+  text-transform: none;
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.375rem;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  align-items: start;
+}
+
+.lots-footer {
+  font-size: 1.25rem;
+  padding-left: 40px;
+  padding-top: 30px;
+}
+
+
+.about {
+  padding-left: 24px;
+  padding-right: 24px;
+  display: grid;
+  grid-template-columns: 359px 690px;
+  grid-template-rows: 283px 144px 1fr;
+}
+ 
+.circle {
+  margin-top: 35px;
+  margin-left: 47px;
+  width: 240px; 
+  height: 240px; 
+  background-color: black; 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_logo {
+  max-width: 62%;
+  max-height: auto;
+}
+
+.about_title {
+  padding: 0;
+  padding-top: 38px;
+  justify-self: start;
+  align-self: center;
+}
+
+.about-text {
+  font-size: 20px;
+}
+
+.about-antiques {
+  padding-right: 5px;
+  grid-column: 2 / 2;
+}
+
+.about-ahead-of-time {
+  grid-column: 2 / 2;
+  grid-row: 3 / 3;
+}
+
+.about-ahead-of-time-end {
+  grid-column: 2 / 2;
+  grid-row: 4 / 4;
+}
+
+footer {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 265px 1fr 240px;
+  padding-top: 180px;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 180px;
+  font-size: 1.125rem;
+}
+
+.social-media-logo {
+    width: 48px; 
+  height: 48px; 
+}
+
+.footer-informations{
+  padding-right: 23px;
+  padding-top: 1px;
+  justify-content: center;
+  justify-items: center;
+  margin-bottom: 115px; 
+}
+
+.footer-social-media{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
