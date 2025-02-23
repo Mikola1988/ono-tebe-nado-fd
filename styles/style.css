@@ -13,7 +13,7 @@ header {
   padding-bottom: 6px;
 }
 
-nav{
+nav {
   grid-column: 1;
 }
 
@@ -173,7 +173,7 @@ h2 {
     background-repeat: no-repeat;   */
 }
 
-.card-lots-picture{
+.card-lots-picture {
   background-image: url('/images/card-lot-03.jpg');
     /* background-color: rgba(0, 0, 0, 0.6); переместил в отдельный класс
     display: grid;
@@ -195,11 +195,11 @@ h2 {
   background-repeat: no-repeat;
 }
 
-.card-lots-top{
+.card-lots-top {
   align-self: start;
 }
 
-.card-lots-bottom{
+.card-lots-bottom {
   align-self: end;
   text-transform: none;
   font-size: 1.25rem;
@@ -283,11 +283,11 @@ footer {
 }
 
 .social-media-logo {
-    width: 48px; 
+  width: 48px; 
   height: 48px; 
 }
 
-.footer-informations{
+.footer-informations {
   padding-right: 23px;
   padding-top: 1px;
   justify-content: center;
@@ -295,7 +295,7 @@ footer {
   margin-bottom: 115px; 
 }
 
-.footer-social-media{
+.footer-social-media {
   display: flex;
   align-items: center;
   justify-content: space-between;
