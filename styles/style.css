@@ -28,7 +28,7 @@ a {
   width: 100%;
 }
 .inline-elements {
-  display: inline; 
+  display: inline;
   border-bottom: 1px solid rgb(0, 0, 0); 
   padding-bottom: 0px;
 }
@@ -205,8 +205,8 @@ h3 {
 .circle {
   margin-top: 35px;
   margin-left: 47px;
-  width: 240px; 
-  height: 240px; 
+  width: 240px;
+  height: 240px;
   background-color: black; 
   border-radius: 50%;
   display: flex;
@@ -258,7 +258,7 @@ footer {
 
 .social-media-logo {
   width: 48px; 
-  height: 48px; 
+  height: 48px;
 }
 
 .footer-informations {
@@ -266,7 +266,7 @@ footer {
   padding-top: 1px;
   justify-content: center;
   justify-items: center;
-  margin-bottom: 115px; 
+  margin-bottom: 115px;
 }
 
 .footer-social-media {
