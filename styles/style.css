@@ -15,6 +15,7 @@ header {
 .link-active {
   text-decoration: none;
 }
+
 a { /* использовал тег как класс, т.к. в документе необходимо заменить стандартное подчеркивание на более толстое и ниже букв во всех ссылках */
   text-decoration: none; 
 }
@@ -192,7 +193,7 @@ ul {
   margin-bottom: 30px;
 }
 
-.magin-card-lots-bottom{
+.magin-card-lots-bottom {
   margin-bottom: 30px;
 }
 
