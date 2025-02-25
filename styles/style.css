@@ -1,35 +1,50 @@
-/* Изначально во всём файле в grid использовал относительные величины, 
-но тогда были большие расхождения с PerfectPixel, заменил на абсолтные для точной подгонки */
+/* Здравствуйте, Nikita Zhmaev. Огомное спасибо за проделанную кропотливую работу и отдельное спасибо за комменты. 
+Всё исправил, скорее всего не всё правильно, но я честно стараюсь :)
+Надеюсь, что мой код не заставвляет Вас плакать и/или плеваться в монитор*/
 header {
-  height: 293px;
+  padding-top: 96px;
+  margin-bottom: 97px;
   display: grid;
-  grid-template-columns: 390px 42px 150px 180px 220px; /* <-- тут */
-  grid-auto-flow: column;
-  justify-content: left;
+  grid-template-columns: 1fr min-content 1fr;
+  justify-content: center;
   align-items: center;
   font-size: 1.125rem;
   padding-left: 50px;
   padding-right: 50px;
-  padding-bottom: 6px;
 }
-
-nav {
-  grid-column: 1;
-}
-
-a {
+.link-active {
   text-decoration: none;
+}
+a { /* использовал тег как класс, т.к. в документе необходимо заменить стандартное подчеркивание на более толстое и ниже букв во всех ссылках */
+  text-decoration: none; 
 }
 
 .header-nav {
-  text-decoration: none;
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  list-style: circle;
 }
+
+.header-nav-home {
+  list-style: none;
+}
+
+.header-nav-lots {
+  margin-left: 33px;
+}
+
+.address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 192px;
+  margin-right: 5px;
+  line-height: 1.35;
+}
+
 .inline-elements {
   display: inline;
-  border-bottom: 1px solid rgb(0, 0, 0); 
+  border-bottom: 2px solid rgb(0, 0, 0);
   padding-bottom: 0px;
 }
 
@@ -38,67 +53,52 @@ ul {
   padding-left: 0;
 }
 
-.adress {
-  line-height: 1.35;
-  grid-column: 5;
-}
-
 .logo-black {
-  grid-column: 3;
   width: 138px;
   height: 105px;
 }
 
 .cover {
-  background-image: url('/images/cover.jpg');
+  background-image: url("../images/cover.jpg");
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   width: 100%;
-  height: 757px;
+  min-height: auto;
   color: white;
   box-sizing: border-box;
+  padding-bottom: 50px;
+  padding-right: 18px;
 }
 
-h1 {
-  height: 550px;
+.cover-title {
   letter-spacing: 0.3em;
-  display: grid;
-  grid-template-columns: 286px 46px 281px 270px 10px; /* <-- тут */
-  grid-template-rows: 117.5px 17px; /* <-- тут и т.д. :)*/
-  place-items: start;
   text-transform: uppercase;
   font-size: 6.25rem;
-  padding: 165px 50px 0px 50px;
-  align-self: start;
+  padding-top: 165px;
+  padding-left: 50px;
 }
 
-/* .ono {
-  grid-column: 3 / span 3;
-  grid-row: 3 / span 3;
-} */
-
-.tebe {
-  grid-column: 3 / 6;
-  grid-row: 3 / 3;
-  align-self: start;
-  
+.aligned-text-center {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
 }
 
-.nado {
-  grid-column: 4 / 6;
-  grid-row: 5 / 6;
-  padding-top: 18px;
-  }
+.aligned-text-right {
+  display: block;
+  text-align: end;
+  margin-top: 17px;
+}
 
 .cover-botom-title {
   display: flex;
   justify-content: space-between;
-  padding-top: 118px;
+  padding-top: 116px;
   padding-left: 50px;
-  padding-right: 52px;
+  padding-right: 32px;
   word-spacing: 21.6px;
   text-transform: uppercase;
   font-size: 1.327rem;
@@ -116,13 +116,13 @@ h1 {
 }
 
 .lots {
-  padding: 180px 24px 150px 24px;
-  height: 1023px;
+  padding: 180px 24px 0 24px;
   width: 100%;
+  margin-bottom: 90px;
   text-decoration: none;
 }
 
-h2 {
+.lots-title {
   display: block;
   width: 100%;
   font-weight: 700;
@@ -135,30 +135,31 @@ h2 {
 .card-lots {
   padding-top: 48px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
   gap: 25px;
-  height: 596px;
   background-blend-mode: overlay;
   color: white;
   text-transform: uppercase;
   background-color: #f0f0f0;
+  flex-basis: 334px;
 }
 
 .card-lots-movie {
-  background-image: url('/images/card-lot-01.jpg');
-  flex-basis: 334px;
+  height: 596px;
+  background-image: url("../images/card-lot-01.jpg");
 }
 
 .card-lots-book {
-  background-image: url('/images/card-lot-02.jpg');
-  flex-basis: 334px;
+  height: 596px;
+  background-image: url("../images/card-lot-02.jpg");
 }
 
 .card-lots-picture {
-  background-image: url('/images/card-lot-03.jpg');
-  flex-basis: 334px;
- }
+  height: 596px;
+  background-image: url("../images/card-lot-03.jpg");
+}
 
 .card-background {
   background-color: rgba(0, 0, 0, 0.6);
@@ -171,15 +172,6 @@ h2 {
 
 .card-lots-top {
   align-self: start;
-}
-
-.card-lots-bottom {
-  align-self: end;
-  text-transform: none;
-  font-size: 1.25rem;
-}
-
-h3 {
   font-weight: 700;
   font-size: 1.375rem;
   text-decoration: underline;
@@ -187,78 +179,82 @@ h3 {
   align-items: start;
 }
 
-.lots-footer {
+.card-lots-bottom {
+  align-self: end;
+  text-transform: none;
   font-size: 1.25rem;
-  padding-left: 40px;
-  padding-top: 30px;
+  
 }
 
+.lots-footer {
+  font-size: 1.25rem;
+  margin-left: 40px;
+  margin-bottom: 30px;
+}
+
+.magin-card-lots-bottom{
+  margin-bottom: 30px;
+}
 
 .about {
   padding-left: 24px;
-  padding-right: 24px;
+  padding-right: 26px;
   display: grid;
-  grid-template-columns: 359px 690px;
-  grid-template-rows: 283px 144px 1fr;
-}
- 
-.circle {
-  margin-top: 35px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3 1fr);
+  row-gap: 11px;
+  text-align: start;
+  justify-items: start;
+  justify-self: start;
+  }
+
+.circle-logo {
   margin-left: 47px;
+  margin-top: 65px;
+  margin-bottom: -11px;
   width: 240px;
   height: 240px;
-  background-color: black; 
+  background-color: black;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 73px;
 }
 
 .about_logo {
   max-width: 62%;
-  max-height: auto;
 }
 
-.about_title {
-  padding: 0;
-  padding-top: 38px;
-  justify-self: start;
-  align-self: center;
+.about-title {
+  margin-top: 165px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  grid-column: 3 / 3;
+  
 }
 
 .about-text {
+  padding-top: 10px;
   font-size: 20px;
-}
-
-.about-antiques {
-  padding-right: 5px;
-  grid-column: 2 / 2;
-}
-
-.about-ahead-of-time {
-  grid-column: 2 / 2;
-  grid-row: 3 / 3;
-}
-
-.about-ahead-of-time-end {
-  grid-column: 2 / 2;
-  grid-row: 4 / 4;
+  grid-column: 3 / 3;
 }
 
 footer {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 265px 1fr 240px;
-  padding-top: 180px;
+  grid-template-columns: repeat(3 1fr);
+  padding-top: 181px;
   padding-left: 50px;
   padding-right: 50px;
-  height: 180px;
   font-size: 1.125rem;
 }
 
-.social-media-logo {
-  width: 48px; 
-  height: 48px;
+.adress-footer {
+  font-style: normal;
+  line-height: 1.35;
 }
 
 .footer-informations {
@@ -267,6 +263,8 @@ footer {
   justify-content: center;
   justify-items: center;
   margin-bottom: 115px;
+  margin-right: 120px;
+  margin-left: 50px;
 }
 
 .footer-social-media {
@@ -274,3 +272,10 @@ footer {
   align-items: center;
   justify-content: space-between;
 }
+
+.social-media-logo {
+  width: 48px;
+  height: 48px;
+}
+/* Огромное спасибо за Вашу работу! Вы - очень крутой. 
+Я работаю учителем и на собственно шкуре знаю и понимаю каково это работать с малознающими людьми */
