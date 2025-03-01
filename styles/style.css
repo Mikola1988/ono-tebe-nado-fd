@@ -48,7 +48,7 @@ a {
   line-height: 24.3px;
 }
 .address-header {
-  padding-left: 195px;
+  padding-left: 192px;
 }
 
 ul {
@@ -57,8 +57,9 @@ ul {
 }
 
 .logo-black {
-  width: 138px;
+  width: 143px;
   height: 105px;
+  padding-left: 6px;
   /* margin-right: 250px; */
 }
 
@@ -144,7 +145,7 @@ ul {
   text-transform: uppercase;
   flex-basis: 334px;
   min-height: auto;
-  padding-bottom: 28px;
+  padding-bottom: 27px;
 }
 
 .card-articale {
@@ -157,8 +158,9 @@ ul {
 .card-lots-top {
   font-weight: 700;
   font-size: 22px;
+  /* border-bottom: #ffffff; */
   text-decoration: underline;
-  text-decoration-style: solid;
+  /* text-decoration-style: solid; */
   margin-bottom: 35px;
   line-height: 26.4px;
   }
@@ -174,7 +176,7 @@ ul {
 
 .card-background {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 50px 40px 48px 40px;
+  padding: 50px 40px 47px 40px;
   background-size: 170%;
   background-position: center;
   background-repeat: no-repeat;
@@ -230,7 +232,7 @@ ul {
 }
 
 .about-title {
-  margin-top: 141px;
+  margin-top: 143px;
   width: 100%;
   font-weight: 700;
   font-size: 40px;
