@@ -23,11 +23,15 @@ a {
   padding-left: 4px;
 }
 
+.header-home {
+  list-style: none;
+}
+
 .link {
   border-bottom: 1px solid rgb(0, 0, 0);
   padding-bottom: 0px;
   padding-left: 0px;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   justify-self: start;
 }
 
@@ -258,6 +262,7 @@ footer {
   padding-top: 178px;
   padding-left: 50px;
   padding-right: 50px;
+  padding-bottom: 82px;
   font-size: 18px;
 }
 
